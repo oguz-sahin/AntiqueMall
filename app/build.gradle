@@ -29,9 +29,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
@@ -47,6 +54,9 @@ dependencies {
 
     //Constraint Layout
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+
+    //Legacy Support
+    implementation "androidx.legacy:legacy-support-v4:$legacy_support_version"
 
 
     //Test
