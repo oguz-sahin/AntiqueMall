@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
     id 'dagger.hilt.android.plugin'
+    id 'com.huawei.agconnect'
 }
 
 android {
@@ -101,4 +102,11 @@ dependencies {
 
     //CircularImageView
     implementation "de.hdodenhof:circleimageview:$circle_image_view_version"
+
+
+    //Ag Connect
+    implementation "com.huawei.agconnect:agconnect-core:$ag_connect_version"
+
+    //Analytic Kit
+    implementation "com.huawei.hms:hianalytics:$analytic_kit_version"
 }
