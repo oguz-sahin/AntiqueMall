@@ -1,4 +1,4 @@
-package com.example.antiquemall.util
+package com.example.antiquemall.util.manager
 
 import android.os.Bundle
 import com.huawei.hms.analytics.HiAnalyticsInstance

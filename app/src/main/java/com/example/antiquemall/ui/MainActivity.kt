@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         val navController = getNavController()
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.splashFragment -> {
+                R.id.splashFragment, R.id.signInFragment -> {
                     binding.bottomNavigationView.gone()
                 }
                 else -> {

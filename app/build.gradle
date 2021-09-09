@@ -103,10 +103,19 @@ dependencies {
     //CircularImageView
     implementation "de.hdodenhof:circleimageview:$circle_image_view_version"
 
+    //Annotation
+    implementation "androidx.annotation:annotation:$annotaion_version"
+
 
     //Ag Connect
     implementation "com.huawei.agconnect:agconnect-core:$ag_connect_version"
 
     //Analytic Kit
     implementation "com.huawei.hms:hianalytics:$analytic_kit_version"
+
+    //Account Kit
+    implementation "com.huawei.hms:hwid:$account_kit_version"
+
+    //Sdp
+    implementation "com.intuit.sdp:sdp-android:$sdp_version"
 }

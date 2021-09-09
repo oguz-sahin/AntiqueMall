@@ -1,7 +1,7 @@
 package com.example.antiquemall
 
 import android.app.Application
-import com.example.antiquemall.util.AnalyticsManager
+import com.example.antiquemall.util.manager.AnalyticsManager
 import com.huawei.hms.analytics.HiAnalytics
 import com.huawei.hms.analytics.HiAnalyticsTools
 import dagger.hilt.android.HiltAndroidApp

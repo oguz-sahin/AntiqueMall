@@ -1,4 +1,4 @@
-package com.example.antiquemall.util
+package com.example.antiquemall.util.abstractwrapper
 
 import android.view.animation.Animation
 

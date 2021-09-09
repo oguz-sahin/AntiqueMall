@@ -8,5 +8,18 @@
         android:id="@+id/splashFragment"
         android:name="com.example.antiquemall.ui.splash.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" />
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.antiquemall.ui.signin.SignInFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" />
 </navigation>
