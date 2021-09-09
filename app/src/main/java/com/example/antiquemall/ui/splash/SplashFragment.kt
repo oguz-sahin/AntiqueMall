@@ -1,5 +1,6 @@
 package com.example.antiquemall.ui.splash
 
+import android.animation.Animator
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
@@ -8,17 +9,25 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.example.antiquemall.base.BaseFragment
 import com.example.antiquemall.databinding.FragmentSplashBinding
-import com.example.antiquemall.util.AbstractAnimationListener
+import com.example.antiquemall.util.abstractwrapper.AbstractAnimationListener
+import com.example.antiquemall.util.abstractwrapper.AbstractAnimatorAnimationListener
 import com.example.antiquemall.util.goneStatusBar
+import dagger.hilt.android.AndroidEntryPoint
 
-
-class SplashFragment : BaseFragment<FragmentSplashBinding>(
+@AndroidEntryPoint
+class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>(
     inflate = FragmentSplashBinding::inflate
 ) {
-    private val viewModel: SplashViewModel by viewModels()
+    override val viewModel: SplashViewModel by viewModels()
+
     private val logoEndAnimationListener = object : AbstractAnimationListener() {
         override fun onAnimationEnd(animation: Animation?) {
             playTextAnimation()
+        }
+    }
+    private val textEndAnimationListener = object : AbstractAnimatorAnimationListener() {
+        override fun onAnimationEnd(animator: Animator?) {
+            viewModel.signInSilent()
         }
     }
 
@@ -47,7 +56,8 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(
     private fun playTextAnimation() {
         binding.tvSlogan.animate()
             .alpha(1.0f)
-            .duration = 500
+            .setDuration(500)
+            .setListener(textEndAnimationListener)
     }
 
 }

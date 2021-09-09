@@ -2,4 +2,13 @@
     <string name="app_name">AntiqueMall</string>
     <string name="feel_the_history">Buy the History</string>
     <string name="app_logo">app_logo</string>
+    <string name="antique_mall">Antique Mall</string>
+    <string name="continue_without_sign_in">Continue Without Sign in</string>
+    <string name="warning">Warning</string>
+    <string name="remember_sign_in_messeage">Please sign in. If you do not sign in, you do not use effectively the app. Do you want to continue anyway?</string>
+    <string name="okey">Okey</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="connection_error">Check Network Connection</string>
+    <string name="general_error">Something Went Wrong</string>
 </resources>
