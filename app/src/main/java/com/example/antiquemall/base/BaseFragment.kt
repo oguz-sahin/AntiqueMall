@@ -13,6 +13,7 @@ import androidx.viewbinding.ViewBinding
 import com.example.antiquemall.R
 import com.example.antiquemall.base.BaseFragment.SnackBarType.ERROR
 import com.example.antiquemall.base.BaseFragment.SnackBarType.SUCCESS
+import com.example.antiquemall.util.manager.AnalyticsManager.sendEvent
 import com.example.antiquemall.util.observeEvent
 import com.google.android.material.snackbar.Snackbar
 
@@ -33,6 +34,11 @@ abstract class BaseFragment<VB : ViewBinding, out VM : BaseViewModel>(
     open fun initListener() {}
 
     open fun initObserver() {}
+
+    override fun onStart() {
+        super.onStart()
+        sendEvent(this.javaClass.simpleName)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

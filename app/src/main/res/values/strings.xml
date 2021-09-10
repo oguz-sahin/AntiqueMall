@@ -11,4 +11,10 @@
     <string name="no">No</string>
     <string name="connection_error">Check Network Connection</string>
     <string name="general_error">Something Went Wrong</string>
+    <string name="home_page">Home Page</string>
+    <string name="profile">Profile</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorites_icon">favorites icon</string>
+    <string name="exit_icon">exit icon</string>
+    <string name="exit">Exit</string>
 </resources>

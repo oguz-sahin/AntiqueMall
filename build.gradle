@@ -29,8 +29,10 @@ buildscript {
         ag_connect_version = "1.5.2.300"
         analytic_kit_version = "6.1.0.300"
         account_kit_version = "6.1.0.302"
+        ads_kit_version = "13.4.46.300"
         sdp_version = "1.0.6"
         annotaion_version = "1.2.0"
+
     }
 
     repositories {

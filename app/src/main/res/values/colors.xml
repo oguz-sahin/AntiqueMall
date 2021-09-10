@@ -22,4 +22,8 @@
     <color name="primary_green_light">#5efc82</color>
     <color name="primary_green_dark">#009624</color>
 
+    //Gray
+    <color name="gray">#C4C4C4</color>
+
+
 </resources>

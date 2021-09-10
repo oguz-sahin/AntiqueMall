@@ -5,7 +5,7 @@ import android.animation.Animator
 /**
  * Created by Oguz Sahin on 9/8/2021.
  */
-abstract class AbstractAnimatorAnimationListener : Animator.AnimatorListener {
+interface AbstractAnimatorAnimationListener : Animator.AnimatorListener {
     override fun onAnimationStart(animator: Animator?) {}
 
     override fun onAnimationEnd(animator: Animator?) {}
