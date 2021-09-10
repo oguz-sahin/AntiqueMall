@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+
+    <View
+        android:id="@+id/bgProfileCard"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_140sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/bg_rounded_corner"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/bgProfileCard"
+        app:layout_constraintStart_toStartOf="@+id/bgProfileCard"
+        app:layout_constraintTop_toTopOf="@+id/bgProfileCard"
+        tools:src="@drawable/ic_person" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvUserName"
+        style="@style/profile_card_text_style"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="@+id/bgProfileCard"
+        app:layout_constraintStart_toStartOf="@+id/bgProfileCard"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserImage"
+        tools:text="Oguz Sahin" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvUserMail"
+        style="@style/profile_card_text_style"
+        app:layout_constraintEnd_toEndOf="@+id/tvUserName"
+        app:layout_constraintStart_toStartOf="@+id/bgProfileCard"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+        tools:text="oguz.sahin@gmail.com" />
+
+
+    <View
+        android:id="@+id/bgFavourites"
+        style="@style/profile_item_style"
+        android:layout_marginTop="@dimen/_24sdp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/bgProfileCard" />
+
+
+    <ImageView
+        android:id="@+id/ivFavoriteIcon"
+        style="@style/profile_item_icon_style"
+        android:contentDescription="@string/favorites_icon"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintBottom_toBottomOf="@+id/bgFavourites"
+        app:layout_constraintStart_toStartOf="@+id/bgFavourites"
+        app:layout_constraintTop_toTopOf="@+id/bgFavourites" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvFavourite"
+        style="@style/profile_item_content_text_style"
+        android:text="@string/favorites"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFavoriteIcon"
+        app:layout_constraintStart_toEndOf="@+id/ivFavoriteIcon"
+        app:layout_constraintTop_toTopOf="@+id/ivFavoriteIcon" />
+
+
+    <View
+        android:id="@+id/bgExit"
+        style="@style/profile_item_style"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/bgFavourites" />
+
+
+    <ImageView
+        android:id="@+id/ivExitIcon"
+        style="@style/profile_item_icon_style"
+        android:contentDescription="@string/exit_icon"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintBottom_toBottomOf="@+id/bgExit"
+        app:layout_constraintStart_toStartOf="@+id/bgExit"
+        app:layout_constraintTop_toTopOf="@+id/bgExit" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvExit"
+        style="@style/profile_item_content_text_style"
+        android:text="@string/exit"
+        app:layout_constraintBottom_toBottomOf="@+id/ivExitIcon"
+        app:layout_constraintStart_toEndOf="@+id/ivExitIcon"
+        app:layout_constraintTop_toTopOf="@+id/ivExitIcon" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_24sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_24sdp" />
+
+
+    <com.huawei.hms.ads.banner.BannerView
+        android:id="@+id/hwBannerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

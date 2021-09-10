@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Alert Dialog -->
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/primary_blue_light</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+    </style>
+
+    <!-- Alert Dialog Button -->
+    <style name="DialogButtonStyle" parent="@style/Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/red_huawei</item>
+    </style>
+
+
+    <!-- ProfileCard Text Style -->
+    <style name="profile_card_text_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/amiko_semibold</item>
+        <item name="android:padding">@dimen/_4sdp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/primary_blue_light</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+    <style name="profile_item_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:background">@drawable/bg_rounded_corner</item>
+    </style>
+
+    <style name="profile_item_icon_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+    </style>
+
+    <style name="profile_item_content_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/primary_blue_dark</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+
+</resources>

@@ -1,6 +1,11 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
+    id 'com.huawei.agconnect'
 }
 
 android {
@@ -12,7 +17,6 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,18 +30,97 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.6.0'
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //Core
+    implementation "androidx.core:core-ktx:$core_version"
+
+    //AppCompat
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+
+    //Material Design
+    implementation "com.google.android.material:material:$material_version"
+
+    //Constraint Layout
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+
+    //Legacy Support
+    implementation "androidx.legacy:legacy-support-v4:$legacy_support_version"
+
+
+    //Test
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$junit_test_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+
+
+    // LifeCycle
+    implementation "androidx.activity:activity-ktx:$activity_ktx_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_ext_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_common_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_viewmodel_version"
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
+    //Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$corountines_verison"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$corountines_android_verison"
+
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_version"
+
+    //AirBnb Lottie
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+
+    //CircularImageView
+    implementation "de.hdodenhof:circleimageview:$circle_image_view_version"
+
+    //Sdp
+    implementation "com.intuit.sdp:sdp-android:$sdp_version"
+
+    //Annotation
+    implementation "androidx.annotation:annotation:$annotaion_version"
+
+
+    //Ag Connect
+    implementation "com.huawei.agconnect:agconnect-core:$ag_connect_version"
+
+    //Analytic Kit
+    implementation "com.huawei.hms:hianalytics:$analytic_kit_version"
+
+    //Account Kit
+    implementation "com.huawei.hms:hwid:$account_kit_version"
+
+    //Ads Kit
+    implementation "com.huawei.hms:ads-lite:$ads_kit_version"
+
+
 }
