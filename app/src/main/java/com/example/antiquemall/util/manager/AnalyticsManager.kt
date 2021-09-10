@@ -8,10 +8,15 @@ import com.huawei.hms.analytics.HiAnalyticsInstance
  */
 object AnalyticsManager {
 
+    const val CONTINUE_WITHOUT_SIGN_IN = "CONTINUE_WITHOUT_SIGN_IN"
+    const val ADS_CLOSED = "ADS_CLOSED"
+    const val ADS_CLICKED = "ADS_CLOSED"
+
     var analyticsInstance: HiAnalyticsInstance? = null
 
-    fun sendCustomEvent(eventName: String, bundleBlock: Bundle.() -> Unit) {
-        analyticsInstance?.onEvent(eventName, Bundle().apply(bundleBlock))
+    fun sendEvent(eventName: String, bundleBlock: (Bundle.() -> Unit)? = null) {
+        val bundle = bundleBlock?.let { Bundle().apply(it) }
+        analyticsInstance?.onEvent(eventName, bundle)
     }
 
 }

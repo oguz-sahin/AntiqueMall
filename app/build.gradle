@@ -103,6 +103,9 @@ dependencies {
     //CircularImageView
     implementation "de.hdodenhof:circleimageview:$circle_image_view_version"
 
+    //Sdp
+    implementation "com.intuit.sdp:sdp-android:$sdp_version"
+
     //Annotation
     implementation "androidx.annotation:annotation:$annotaion_version"
 
@@ -116,6 +119,8 @@ dependencies {
     //Account Kit
     implementation "com.huawei.hms:hwid:$account_kit_version"
 
-    //Sdp
-    implementation "com.intuit.sdp:sdp-android:$sdp_version"
+    //Ads Kit
+    implementation "com.huawei.hms:ads-lite:$ads_kit_version"
+
+
 }

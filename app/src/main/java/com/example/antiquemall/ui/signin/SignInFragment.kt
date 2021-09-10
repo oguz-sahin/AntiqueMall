@@ -9,7 +9,9 @@ import androidx.fragment.app.viewModels
 import com.example.antiquemall.R
 import com.example.antiquemall.base.BaseFragment
 import com.example.antiquemall.databinding.FragmentSigninBinding
-import com.example.antiquemall.util.showToast
+import com.example.antiquemall.ui.vm.SignInViewModel
+import com.example.antiquemall.util.manager.AnalyticsManager.CONTINUE_WITHOUT_SIGN_IN
+import com.example.antiquemall.util.manager.AnalyticsManager.sendEvent
 import com.huawei.hms.support.account.service.AccountAuthService
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -62,7 +64,8 @@ class SignInFragment : BaseFragment<FragmentSigninBinding, SignInViewModel>(
             .setPositiveButton(
                 getString(R.string.yes)
             ) { _, _ ->
-                showToast("devam et tıklandı")
+                sendEvent(CONTINUE_WITHOUT_SIGN_IN)
+                navigateDirections(SignInFragmentDirections.actionSignInFragmentToHomeFragment())
             }.setNegativeButton(getString(R.string.no)) { dialog, _ ->
                 dialog.cancel()
             }
