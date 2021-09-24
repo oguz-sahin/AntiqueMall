@@ -2,6 +2,8 @@ package com.example.antiquemall.ui.vm
 
 import com.example.antiquemall.base.BaseViewModel
 import com.example.antiquemall.ui.splash.SplashFragmentDirections
+import com.example.antiquemall.ui.splash.SplashFragmentDirections.actionSplashFragmentToHomeFragment
+import com.example.antiquemall.ui.splash.SplashFragmentDirections.actionSplashFragmentToSignInFragment
 import com.example.antiquemall.util.manager.AuthAccountManager.setAuthAccount
 import com.huawei.hms.support.account.service.AccountAuthService
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -20,9 +22,9 @@ class SplashViewModel @Inject constructor(
         accountAuthService.silentSignIn()
             .addOnSuccessListener { autAccount ->
                 setAuthAccount(autAccount)
-                navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment())
+                navigate(actionSplashFragmentToHomeFragment())
             }.addOnFailureListener {
-                navigate(SplashFragmentDirections.actionSplashFragmentToSignInFragment())
+                navigate(actionSplashFragmentToSignInFragment())
             }
     }
 

@@ -1,8 +1,8 @@
 package com.example.antiquemall.util.abstractwrapper
 
-import com.example.antiquemall.util.manager.AnalyticsManager
 import com.example.antiquemall.util.manager.AnalyticsManager.ADS_CLICKED
 import com.example.antiquemall.util.manager.AnalyticsManager.ADS_CLOSED
+import com.example.antiquemall.util.manager.AnalyticsManager.sendEvent
 import com.huawei.hms.ads.AdListener
 
 /**
@@ -12,12 +12,12 @@ import com.huawei.hms.ads.AdListener
 abstract class AbstractAdListener : AdListener() {
     override fun onAdClicked() {
         super.onAdClicked()
-        AnalyticsManager.sendEvent(ADS_CLICKED)
+        sendEvent(ADS_CLICKED)
     }
 
     override fun onAdClosed() {
         super.onAdClosed()
-        AnalyticsManager.sendEvent(ADS_CLOSED)
+        sendEvent(ADS_CLOSED)
     }
 
 }
