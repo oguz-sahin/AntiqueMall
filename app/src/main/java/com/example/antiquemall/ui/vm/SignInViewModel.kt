@@ -4,7 +4,7 @@ import android.app.Activity
 import androidx.activity.result.ActivityResult
 import androidx.lifecycle.viewModelScope
 import com.example.antiquemall.base.BaseViewModel
-import com.example.antiquemall.ui.signin.SignInFragmentDirections
+import com.example.antiquemall.ui.signin.SignInFragmentDirections.actionSignInFragmentToHomeFragment
 import com.example.antiquemall.util.manager.AnalyticsManager.sendEvent
 import com.example.antiquemall.util.manager.AuthAccountManager.setAuthAccount
 import com.huawei.hms.analytics.type.HAEventType.SIGNIN
@@ -30,7 +30,7 @@ class SignInViewModel @Inject constructor() : BaseViewModel() {
                     val authAccount = authAccountTask.result
                     setAuthAccount(authAccount)
                     sendEvent(SIGNIN)
-                    navigate(SignInFragmentDirections.actionSignInFragmentToHomeFragment())
+                    navigate(actionSignInFragmentToHomeFragment())
                 } else {
                     // The sign-in failed. No processing is required. Logs are recorded for fault locating.
                     showError("sign in failed : " + (authAccountTask.exception as ApiException).statusCode)
