@@ -2,6 +2,7 @@ package com.example.antiquemall
 
 import android.app.Application
 import com.example.antiquemall.util.manager.AnalyticsManager
+import com.huawei.agconnect.crash.AGConnectCrash
 import com.huawei.hms.ads.HwAds
 import com.huawei.hms.analytics.HiAnalytics
 import com.huawei.hms.analytics.HiAnalyticsTools
@@ -16,8 +17,10 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         setupAnalytics()
+        initCrashService()
         initAdsKit()
     }
+
 
     private fun setupAnalytics() {
         HiAnalytics.getInstance(this).also {
@@ -26,6 +29,11 @@ class App : Application() {
             HiAnalyticsTools.enableLog()
             setAnalyticsEnabled(true)
         }
+    }
+
+
+    private fun initCrashService() {
+        AGConnectCrash.getInstance().enableCrashCollection(true)
     }
 
     private fun initAdsKit() {
