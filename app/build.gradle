@@ -122,5 +122,7 @@ dependencies {
     //Ads Kit
     implementation "com.huawei.hms:ads-lite:$ads_kit_version"
 
+    //Crash Service
+    implementation "com.huawei.agconnect:agconnect-crash:$crash_service_version"
 
 }
