@@ -11,10 +11,8 @@ import com.example.antiquemall.data.model.UserTypes.GUEST
 import com.example.antiquemall.data.model.UserTypes.SIGNED
 import com.example.antiquemall.databinding.FragmentProfileBinding
 import com.example.antiquemall.ui.vm.ProfileViewModel
-import com.example.antiquemall.util.abstractwrapper.AbstractAdListener
+import com.example.antiquemall.util.ext.loadAds
 import com.example.antiquemall.util.observe
-import com.huawei.hms.ads.AdParam
-import com.huawei.hms.ads.BannerAdSize
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -26,7 +24,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setBannerView()
+        loadAds()
     }
 
     override fun initObserver() {
@@ -44,15 +42,8 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(
         }
     }
 
-    private fun setBannerView() {
-        binding.hwBannerView.apply {
-            adId = "testw6vs28auh3"
-            bannerAdSize = BannerAdSize.BANNER_SIZE_360_57
-            setBannerRefresh(30)
-            adListener = object : AbstractAdListener() {}
-        }.run {
-            loadAd(AdParam.Builder().build())
-        }
+    private fun loadAds() {
+        binding.hwBannerView.loadAds()
     }
 
 

@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.antiquemall.base.BaseViewModel
 import com.example.antiquemall.data.model.UserInfo
-import com.example.antiquemall.ui.profile.ProfileFragmentDirections
 import com.example.antiquemall.ui.profile.ProfileFragmentDirections.actionProfileFragmentToSignInFragment
 import com.example.antiquemall.util.manager.AnalyticsManager.sendEvent
 import com.example.antiquemall.util.manager.AuthAccountManager.getUserInfo
@@ -30,7 +29,7 @@ class ProfileViewModel @Inject constructor(
     }
 
     fun signOut() {
-        accountAuthService.signOut()
+        accountAuthService.cancelAuthorization()
             .addOnSuccessListener {
                 sendEvent(SIGNOUT)
                 removeAutAccount()

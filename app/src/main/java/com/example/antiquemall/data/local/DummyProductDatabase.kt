@@ -22,10 +22,10 @@ object DummyProductDatabase {
                     "https://cdn.dekopasaj.com/products/3/8d8ca6ba-2902-4dc0-ae36-d3fa3c6097bc.jpeg",
                     "https://cdn.dekopasaj.com/products/3/cff14503-9821-4656-b065-2bb561291e84.jpeg"
                 ),
-                dimension = "Width : 23 cm | Height : 30 cm | Depth : 23 cm",
+                dimension = "23cm X 30cm X 23cm",
                 seller = Seller(
                     name = "Cassidy Valdez",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/women/10.jpg",
+                    photoUrl = "https://static.generated.photos/vue-static/face-generator/landing/wall/20.jpg",
                     phone = "0112502 981 2792",
                     city = "Duleek",
                     latitude = 22.8543,
@@ -44,10 +44,10 @@ object DummyProductDatabase {
                     "https://cdn.dekopasaj.com/products/3/9bb9105e-29fa-4046-8a2e-c063ba1cfe87.jpeg",
                     "https://cdn.dekopasaj.com/products/3/9bb9105e-29fa-4046-8a2e-c063ba1cfe87.jpeg"
                 ),
-                dimension = "Width : 33 cm | Height : 40 cm | Depth : 33 cm",
+                dimension = "33cm X 40cm X 33cm",
                 seller = Seller(
                     name = "Sheryl Cole",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/women/83.jpg",
+                    photoUrl = "https://images.generated.photos/O4GYE3E3YkRXNPw9VnSQ2-jfYCZJpaEkOVmHv3LY8vA/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MjUwMzQyLmpwZw.jpg",
                     phone = "0112502 981 271",
                     city = "Nottingham",
                     latitude = -73.9919,
@@ -66,10 +66,10 @@ object DummyProductDatabase {
                     "https://cdn.dekopasaj.com/products/3/dcf67ce1-e4de-4bc8-9cbd-06eaba8a0d0b.jpeg",
                     "https://cdn.dekopasaj.com/products/3/ddcdd683-afff-4e9f-86de-0866bc6cca97.jpeg"
                 ),
-                dimension = "Width : 23 cm | Height : 30 cm | Depth : 23 cm",
+                dimension = "23cm X 30cm X 23cm",
                 seller = Seller(
                     name = "Samuel Rantanen",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/men/10.jpg",
+                    photoUrl = "https://images.generated.photos/Z5ABdMujarcTAS1mUfngfvo4HzWUcfXfAQ_FQZqq9DU/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDA3MDIwLmpwZw.jpg",
                     phone = "02-417-621",
                     city = "Keminmaa",
                     latitude = -85.4590,
@@ -88,10 +88,10 @@ object DummyProductDatabase {
                     "https://cdn.dekopasaj.com/products/3/2ed5a680-c09d-4200-954f-73d1330881d3.jpeg",
                     "https://cdn.dekopasaj.com/products/1/f5c7f57c-95ed-4240-b8d0-91423fc5e348.jpeg"
                 ),
-                dimension = "Width : 19 cm | Height : 50 cm | Depth : 19 cm",
+                dimension = "19cm X 50cm X 19cm",
                 seller = Seller(
                     name = "Lorraine Taylor",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/women/38.jpg",
+                    photoUrl = "https://images.generated.photos/guMaZBboDP63nfnYZrz3E4NgmuI5CXQHu_23VwvnPCI/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/Mjk4OTQ2LmpwZw.jpg",
                     phone = "06-3291-7712",
                     city = "Albury",
                     latitude = 49.3564,
@@ -108,10 +108,10 @@ object DummyProductDatabase {
                 photoUrls = listOf(
                     "https://cdn.dekopasaj.com/products/3/d8a14a3d-b037-4db2-a68e-99baf51d194a.png"
                 ),
-                dimension = "Width : 14 cm | Height : 16 cm | Depth : 14 cm",
+                dimension = "14cm X 16cm X 14cm",
                 seller = Seller(
                     name = "Deborah Dean",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/women/66.jpg",
+                    photoUrl = "https://images.generated.photos/EnVQyx45wAwp60VmyfNSxo4F-78RYkqfz0Z82nEwzpw/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDg0OTUyLmpwZw.jpg",
                     phone = "016973 05872",
                     city = "Ely",
                     latitude = 38.4534,
@@ -130,10 +130,10 @@ object DummyProductDatabase {
                     "https://cdn.dekopasaj.com/products/3/24bd5e94-0f44-454c-8869-de557e453a9d.jpeg",
                     "https://cdn.dekopasaj.com/products/3/6dc02e07-dc6b-4b22-a1a0-3f40cb4b9d15.jpeg"
                 ),
-                dimension = "Width : 27 cm | Height : 29 cm | Depth : 10 cm",
+                dimension = "27cm X 29cm X 10cm",
                 seller = Seller(
                     name = "Alani da Mata",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/women/75.jpg",
+                    photoUrl = "https://images.generated.photos/1a69ALkmzhMLl0z899KFzQhBlutpoWsiSbaoO_jJKjo/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MzU1OTg3LmpwZw.jpg",
                     phone = "(48) 6464-7307",
                     city = "Uruguaiana",
                     latitude = -6.9669,
@@ -150,10 +150,10 @@ object DummyProductDatabase {
                 photoUrls = listOf(
                     "https://cdn.dekopasaj.com/products/3/d8f68d4a-836b-4950-bee3-a03b5122d125.png"
                 ),
-                dimension = "Width : 16 cm | Height : 19 cm | Depth : 16 cm",
+                dimension = "16cm X 19cm X 16cm",
                 seller = Seller(
                     name = "Flora Lecomte",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/women/28.jpg",
+                    photoUrl = "https://images.generated.photos/_Jv3OTCuwV-3cI6qDn2HOjH_oyGBzanpoEIg3HJZNNI/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NjY4NTAyLmpwZw.jpg",
                     phone = "03-44-49-81-67",
                     city = "Creteil",
                     latitude = 26.6245,
@@ -170,10 +170,10 @@ object DummyProductDatabase {
                 photoUrls = listOf(
                     "https://cdn.dekopasaj.com/products/3/ae3a4ca4-c433-46b3-b91e-4e8694a2768f.png"
                 ),
-                dimension = "Width : 12 cm | Height : 35 cm | Depth : 16 cm",
+                dimension = "12cm X 35cm X 16cm",
                 seller = Seller(
                     name = "Traugott Rmeoml",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/men/93.jpg",
+                    photoUrl = "https://images.generated.photos/EiZbGG0T3jQioSsUVLzFBEkCHyLy_BeNsX6mJmHtI2I/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NjYyMDM3LmpwZw.jpg",
                     phone = "0079-6218623",
                     city = "Lugau",
                     latitude = 64.0155,
@@ -191,10 +191,10 @@ object DummyProductDatabase {
                     "https://cdn.dekopasaj.com/products/3/eb0127d6-2d87-4d06-be56-1d4e6a23623a.jpeg",
                     "https://cdn.dekopasaj.com/products/3/81b085c2-91a7-4b38-9e7a-eb4da3298a7b.jpeg"
                 ),
-                dimension = "Width : 9 cm | Height : 16 cm | Depth : 9 cm",
+                dimension = "9cm X 16cm X 9cm",
                 seller = Seller(
                     name = "Rayn Ray",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/men/62.jpg",
+                    photoUrl = "https://images.generated.photos/SHi3Ny0yc4vj9Cwox2B3gsGwa4Y4iTTSQ0pJOJGWYMk/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NzAyNDU0LmpwZw.jpg",
                     phone = "013873 49055",
                     city = "Inverness",
                     latitude = -80.6331,
@@ -213,10 +213,10 @@ object DummyProductDatabase {
                     "https://cdn.dekopasaj.com/products/3/63070ca7-a86b-40f7-938c-34545e39b1d1.jpeg",
                     "https://cdn.dekopasaj.com/products/3/6fb7ad7c-d281-4c0b-831a-9112f16fc9cb.jpeg"
                 ),
-                dimension = "Width : 6 cm | Height : 10 cm | Depth : 6 cm",
+                dimension = "6cm X 10cm X 6cm",
                 seller = Seller(
                     name = "Barış Egeli",
-                    photoUrl = "https://randomuser.me/api/portraits/thumb/men/42.jpg",
+                    photoUrl = "https://images.generated.photos/fLFyGEX9yyVJrZEJyf_7n23TYfvCts49wkg4pUPc0W8/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/Nzk3Mjk4LmpwZw.jpg",
                     phone = "(237)-546-9438",
                     city = "İstanbul",
                     latitude = 41.015137,

@@ -17,4 +17,6 @@
     <string name="favorites_icon">favorites icon</string>
     <string name="exit_icon">exit icon</string>
     <string name="exit">Exit</string>
+    <string name="product_image">Product Image</string>
+    <string name="products">Products</string>
 </resources>
