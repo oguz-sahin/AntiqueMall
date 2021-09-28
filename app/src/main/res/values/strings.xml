@@ -19,4 +19,5 @@
     <string name="exit">Exit</string>
     <string name="product_image">Product Image</string>
     <string name="products">Products</string>
+    <string name="no_favorite_products">You do not have any favorite products yet.</string>
 </resources>

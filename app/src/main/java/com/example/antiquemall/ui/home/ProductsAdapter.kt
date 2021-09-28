@@ -16,7 +16,7 @@ import com.example.antiquemall.ui.home.ProductsAdapter.ProductListItemTypes.Prod
  */
 class ProductsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    var productsListItems = arrayListOf<ProductListItemTypes>()
+    var productsListItems = mutableListOf<ProductListItemTypes>()
         @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value
