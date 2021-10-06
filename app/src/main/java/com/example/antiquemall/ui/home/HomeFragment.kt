@@ -5,15 +5,15 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.antiquemall.R
-import com.example.antiquemall.base.BaseFragment
+import com.example.antiquemall.base.BaseFragmentWithViewModel
 import com.example.antiquemall.databinding.FragmentHomeBinding
+import com.example.antiquemall.ui.home.HomeFragmentDirections.actionHomeFragmentToProductDetailFragment
 import com.example.antiquemall.ui.vm.HomeViewModel
 import com.example.antiquemall.util.observe
-import com.example.antiquemall.util.showToast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
+class HomeFragment : BaseFragmentWithViewModel<FragmentHomeBinding, HomeViewModel>(
     FragmentHomeBinding::inflate
 ) {
     override val viewModel: HomeViewModel by viewModels()
@@ -34,15 +34,19 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
     }
 
     private fun initAdapter() {
-        productsAdapter.setOnProductItemCLickListener {
-            showToast(it.toString())
+        productsAdapter.setOnProductItemCLickListener { productId ->
+            val action = actionHomeFragmentToProductDetailFragment().also {
+                it.productId = productId
+            }
+            navigateDirections(action)
         }
+
         val layoutManager = GridLayoutManager(requireContext(), 2)
         layoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
                 return when (productsAdapter.getItemViewType(position)) {
-                    R.layout.item_ads -> ADS_SPAN_COUNT
-                    R.layout.item_product -> PRODUCT_SPAN_COUNT
+                    R.layout.item_ads -> PRODUCT_SPAN_COUNT
+                    R.layout.item_product -> ADS_SPAN_COUNT
                     else -> throw IllegalStateException("Unknown view type")
                 }
             }
@@ -55,8 +59,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
 
 
     companion object {
-        private const val ADS_SPAN_COUNT = 2
-        private const val PRODUCT_SPAN_COUNT = 1
+        private const val ADS_SPAN_COUNT = 1
+        private const val PRODUCT_SPAN_COUNT = 2
     }
 
 }

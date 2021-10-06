@@ -43,8 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setNavDestinationListener() {
         val navController = getNavController()
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-
+        navController.addOnDestinationChangedListener { _, destination, arguments ->
             when (destination.id) {
                 R.id.splashFragment -> {
                     setNavigationViewAndAppBarVisibility(
@@ -59,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                         isNavigationViewVisible = false
                     )
                 }
+
                 else -> {
                     setNavigationViewAndAppBarVisibility(
                         isAppBarVisible = true,
@@ -88,4 +88,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun setAppBarTitle(title: String?) {
+        binding.topAppBar.title = title
+    }
 }

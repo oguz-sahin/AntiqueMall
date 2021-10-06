@@ -20,4 +20,24 @@
     <string name="product_image">Product Image</string>
     <string name="products">Products</string>
     <string name="no_favorite_products">You do not have any favorite products yet.</string>
+    <string name="get_contact">Get Contact</string>
+    <string name="info">INFO</string>
+    <string name="location">LOCATION</string>
+    <string name="product_features">Product Features</string>
+    <string name="dimensions"><![CDATA[<b>Dimensions</b> : %1s]]></string>
+    <string name="status"><![CDATA[<b>Status</b> : %1s]]></string>
+    <string name="color"><![CDATA[<b>Color</b> : %1s]]></string>
+    <string name="material"><![CDATA[<b>Material</b> : %1s]]></string>
+    <string name="price"><![CDATA[<b>Price</b> : %1s%2s]]></string>
+    <string name="seller"><![CDATA[<b>Seller</b> : %1s]]></string>
+    <string name="add_favorites">Add Favorites</string>
+    <string name="remove_favorites">Remove Favorites</string>
+    <string name="added_favorites">Added Favorites</string>
+    <string name="removed_favorites">Removed Favorites</string>
+    <string name="mark_dollar">$</string>
+    <string name="seller_location">Seller Location</string>
+    <string name="guess_user_call_error">Please sign in to make call.</string>
+    <string name="call_permission_message">You have to give permission to make call.</string>
+
+
 </resources>

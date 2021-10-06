@@ -28,8 +28,8 @@ object DummyProductDatabase {
                     photoUrl = "https://static.generated.photos/vue-static/face-generator/landing/wall/20.jpg",
                     phone = "0112502 981 2792",
                     city = "Duleek",
-                    latitude = 22.8543,
-                    longitude = 152.8797
+                    latitude = 53.655800,
+                    longitude = -6.415730
                 )
             ),
             Product(
@@ -50,8 +50,8 @@ object DummyProductDatabase {
                     photoUrl = "https://images.generated.photos/O4GYE3E3YkRXNPw9VnSQ2-jfYCZJpaEkOVmHv3LY8vA/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MjUwMzQyLmpwZw.jpg",
                     phone = "0112502 981 271",
                     city = "Nottingham",
-                    latitude = -73.9919,
-                    longitude = -43.3259
+                    latitude = 54.110943,
+                    longitude = 4.886719
                 )
             ),
             Product(
@@ -72,8 +72,8 @@ object DummyProductDatabase {
                     photoUrl = "https://images.generated.photos/Z5ABdMujarcTAS1mUfngfvo4HzWUcfXfAQ_FQZqq9DU/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDA3MDIwLmpwZw.jpg",
                     phone = "02-417-621",
                     city = "Keminmaa",
-                    latitude = -85.4590,
-                    longitude = 130.2531
+                    latitude = 65.801270,
+                    longitude = 24.545019
                 )
             ),
             Product(
@@ -94,8 +94,8 @@ object DummyProductDatabase {
                     photoUrl = "https://images.generated.photos/guMaZBboDP63nfnYZrz3E4NgmuI5CXQHu_23VwvnPCI/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/Mjk4OTQ2LmpwZw.jpg",
                     phone = "06-3291-7712",
                     city = "Albury",
-                    latitude = 49.3564,
-                    longitude = 179.9250
+                    latitude = -36.073730,
+                    longitude = 146.913544
                 )
             ),
             Product(
@@ -114,8 +114,8 @@ object DummyProductDatabase {
                     photoUrl = "https://images.generated.photos/EnVQyx45wAwp60VmyfNSxo4F-78RYkqfz0Z82nEwzpw/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MDg0OTUyLmpwZw.jpg",
                     phone = "016973 05872",
                     city = "Ely",
-                    latitude = 38.4534,
-                    longitude = 116.0578
+                    latitude = 52.399448,
+                    longitude = 0.259790
                 )
             ),
             Product(
@@ -136,8 +136,8 @@ object DummyProductDatabase {
                     photoUrl = "https://images.generated.photos/1a69ALkmzhMLl0z899KFzQhBlutpoWsiSbaoO_jJKjo/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MzU1OTg3LmpwZw.jpg",
                     phone = "(48) 6464-7307",
                     city = "Uruguaiana",
-                    latitude = -6.9669,
-                    longitude = 104.0041
+                    latitude = -29.758459,
+                    longitude = -57.096020
                 )
             ),
             Product(
@@ -156,8 +156,8 @@ object DummyProductDatabase {
                     photoUrl = "https://images.generated.photos/_Jv3OTCuwV-3cI6qDn2HOjH_oyGBzanpoEIg3HJZNNI/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NjY4NTAyLmpwZw.jpg",
                     phone = "03-44-49-81-67",
                     city = "Creteil",
-                    latitude = 26.6245,
-                    longitude = 6.4312
+                    latitude = 48.789612,
+                    longitude = 2.452600
                 )
             ),
             Product(
@@ -176,8 +176,8 @@ object DummyProductDatabase {
                     photoUrl = "https://images.generated.photos/EiZbGG0T3jQioSsUVLzFBEkCHyLy_BeNsX6mJmHtI2I/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NjYyMDM3LmpwZw.jpg",
                     phone = "0079-6218623",
                     city = "Lugau",
-                    latitude = 64.0155,
-                    longitude = -64.2013
+                    latitude = 50.739010,
+                    longitude = 12.734580
                 )
             ),
             Product(
@@ -197,8 +197,8 @@ object DummyProductDatabase {
                     photoUrl = "https://images.generated.photos/SHi3Ny0yc4vj9Cwox2B3gsGwa4Y4iTTSQ0pJOJGWYMk/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NzAyNDU0LmpwZw.jpg",
                     phone = "013873 49055",
                     city = "Inverness",
-                    latitude = -80.6331,
-                    longitude = -35.9123
+                    latitude = 57.477772,
+                    longitude = -4.224721
                 )
             ),
             Product(
@@ -230,12 +230,13 @@ object DummyProductDatabase {
 
     fun getAllProducts() = products
 
-    fun getProductsById(id: Int) = products.find { it.id == id }
+    fun getProductById(id: Int) = products.find { it.id == id }
 
     fun getFavoritesProducts() = products.filter { it.isFavorite }
 
-    fun setProductFavoriteStatus(id: Int, isFavorite: Boolean) {
-        getProductsById(id)?.isFavorite = isFavorite
+    fun setProductFavoriteStatus(id: Int, isFavorite: Boolean, completeListener: () -> Unit) {
+        getProductById(id)?.isFavorite = isFavorite
+        completeListener.invoke()
     }
 
 

@@ -3,6 +3,7 @@ package com.example.antiquemall.ui.vm
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.antiquemall.base.BaseViewModel
+import com.example.antiquemall.data.local.DummyProductDatabase.refreshAllProducts
 import com.example.antiquemall.data.model.UserInfo
 import com.example.antiquemall.ui.profile.ProfileFragmentDirections.actionProfileFragmentToSignInFragment
 import com.example.antiquemall.util.manager.AnalyticsManager.sendEvent
@@ -33,6 +34,7 @@ class ProfileViewModel @Inject constructor(
             .addOnSuccessListener {
                 sendEvent(SIGNOUT)
                 removeAutAccount()
+                refreshAllProducts()
                 navigate(actionProfileFragmentToSignInFragment())
             }.addOnFailureListener {
                 showGeneralError()
