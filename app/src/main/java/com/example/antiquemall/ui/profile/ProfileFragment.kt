@@ -5,11 +5,12 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.example.antiquemall.R
-import com.example.antiquemall.base.BaseFragment
+import com.example.antiquemall.base.BaseFragmentWithViewModel
 import com.example.antiquemall.data.model.UserInfo
 import com.example.antiquemall.data.model.UserTypes.GUEST
 import com.example.antiquemall.data.model.UserTypes.SIGNED
 import com.example.antiquemall.databinding.FragmentProfileBinding
+import com.example.antiquemall.ui.profile.ProfileFragmentDirections.actionProfileFragmentToFavoritesFragment
 import com.example.antiquemall.ui.vm.ProfileViewModel
 import com.example.antiquemall.util.ext.loadAds
 import com.example.antiquemall.util.observe
@@ -17,7 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(
+class ProfileFragment : BaseFragmentWithViewModel<FragmentProfileBinding, ProfileViewModel>(
     FragmentProfileBinding::inflate
 ) {
     override val viewModel: ProfileViewModel by viewModels()
@@ -38,6 +39,9 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(
         with(binding) {
             bgExit.setOnClickListener {
                 viewModel.signOut()
+            }
+            bgFavourites.setOnClickListener {
+                navigateDirections(actionProfileFragmentToFavoritesFragment())
             }
         }
     }

@@ -6,6 +6,7 @@ import com.huawei.agconnect.crash.AGConnectCrash
 import com.huawei.hms.ads.HwAds
 import com.huawei.hms.analytics.HiAnalytics
 import com.huawei.hms.analytics.HiAnalyticsTools
+import com.huawei.hms.maps.MapsInitializer
 import dagger.hilt.android.HiltAndroidApp
 
 /**
@@ -19,8 +20,8 @@ class App : Application() {
         setupAnalytics()
         initCrashService()
         initAdsKit()
+        setMapApiKey()
     }
-
 
     private fun setupAnalytics() {
         HiAnalytics.getInstance(this).also {
@@ -39,5 +40,11 @@ class App : Application() {
     private fun initAdsKit() {
         HwAds.init(this)
     }
+
+
+    private fun setMapApiKey() {
+        MapsInitializer.setApiKey(BuildConfig.MAP_API_KEY)
+    }
+
 
 }
