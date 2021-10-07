@@ -97,14 +97,6 @@ dependencies {
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_version"
 
-    //AirBnb Lottie
-    implementation "com.airbnb.android:lottie:$lottieVersion"
-
-    //Room
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-    implementation "androidx.room:room-ktx:$room_version"
-
     //CircularImageView
     implementation "de.hdodenhof:circleimageview:$circle_image_view_version"
 
