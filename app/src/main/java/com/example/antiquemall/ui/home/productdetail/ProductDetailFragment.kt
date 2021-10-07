@@ -22,12 +22,12 @@ import com.example.antiquemall.util.hasPermissions
 import com.example.antiquemall.util.makePhoneCall
 import com.example.antiquemall.util.manager.AnalyticsManager.CONTACT_PHONE_KEY
 import com.example.antiquemall.util.manager.AnalyticsManager.GET_CONTACT_CLICKED
-import com.example.antiquemall.util.manager.AnalyticsManager.PRODUCT_KEY
-import com.example.antiquemall.util.manager.AnalyticsManager.VIEWED_PRODUCT
 import com.example.antiquemall.util.manager.AnalyticsManager.sendEvent
 import com.example.antiquemall.util.observe
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.huawei.hms.analytics.type.HAEventType.*
+import com.huawei.hms.analytics.type.HAParamType.*
 
 class ProductDetailFragment :
     BaseFragmentWithViewModel<FragmentProductDetailBinding, ProductDetailViewModel>(
@@ -61,7 +61,6 @@ class ProductDetailFragment :
     override fun initObserver() {
         super.initObserver()
         observe(viewModel.product) {
-            sendEvent(eventName = VIEWED_PRODUCT) { putParcelable(PRODUCT_KEY, it) }
             setTitle(it.name)
             setProductDetailTabs(it)
             setPhotos(it.photoUrls)
