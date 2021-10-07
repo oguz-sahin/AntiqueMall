@@ -5,28 +5,27 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.example.antiquemall.R
-import com.example.antiquemall.base.BaseFragment
+import com.example.antiquemall.base.BaseFragmentWithViewModel
 import com.example.antiquemall.data.model.UserInfo
 import com.example.antiquemall.data.model.UserTypes.GUEST
 import com.example.antiquemall.data.model.UserTypes.SIGNED
 import com.example.antiquemall.databinding.FragmentProfileBinding
+import com.example.antiquemall.ui.profile.ProfileFragmentDirections.actionProfileFragmentToFavoritesFragment
 import com.example.antiquemall.ui.vm.ProfileViewModel
-import com.example.antiquemall.util.abstractwrapper.AbstractAdListener
+import com.example.antiquemall.util.ext.loadAds
 import com.example.antiquemall.util.observe
-import com.huawei.hms.ads.AdParam
-import com.huawei.hms.ads.BannerAdSize
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(
+class ProfileFragment : BaseFragmentWithViewModel<FragmentProfileBinding, ProfileViewModel>(
     FragmentProfileBinding::inflate
 ) {
     override val viewModel: ProfileViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setBannerView()
+        loadAds()
     }
 
     override fun initObserver() {
@@ -41,18 +40,14 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(
             bgExit.setOnClickListener {
                 viewModel.signOut()
             }
+            bgFavourites.setOnClickListener {
+                navigateDirections(actionProfileFragmentToFavoritesFragment())
+            }
         }
     }
 
-    private fun setBannerView() {
-        binding.hwBannerView.apply {
-            adId = "testw6vs28auh3"
-            bannerAdSize = BannerAdSize.BANNER_SIZE_360_57
-            setBannerRefresh(30)
-            adListener = object : AbstractAdListener() {}
-        }.run {
-            loadAd(AdParam.Builder().build())
-        }
+    private fun loadAds() {
+        binding.hwBannerView.loadAds()
     }
 
 

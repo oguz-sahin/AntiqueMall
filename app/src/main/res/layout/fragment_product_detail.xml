@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.productdetail.ProductDetailFragment">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpProductPhotos"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_200sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dotsIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:dotsColor="@color/gray"
+        app:dotsCornerRadius="@dimen/_8sdp"
+        app:dotsSize="@dimen/_4sdp"
+        app:dotsSpacing="@dimen/_4sdp"
+        app:dotsWidthFactor="2.5"
+        app:layout_constraintBottom_toBottomOf="@id/vpProductPhotos"
+        app:layout_constraintEnd_toEndOf="@id/vpProductPhotos"
+        app:layout_constraintStart_toStartOf="@id/vpProductPhotos"
+        app:progressMode="true"
+        app:selectedDotColor="@color/primary_blue" />
+
+    <View
+        android:id="@+id/dividerTopTl"
+        style="@style/divider_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vpProductPhotos" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tlProductDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerTopTl"
+        app:tabIconTint="@color/tl_color_selector"
+        app:tabIndicatorHeight="0dp"
+        app:tabTextColor="@color/tl_color_selector" />
+
+    <View
+        android:id="@+id/dividerBottomTl"
+        style="@style/divider_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tlProductDetail" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpProductDetail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tlProductDetail" />
+
+    <View
+        android:id="@+id/dividerBottomVp"
+        style="@style/divider_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vpProductDetail" />
+
+
+    <Button
+        android:id="@+id/btnAddFavorite"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_favorites"
+        android:textColor="@color/primary_blue"
+        app:layout_constraintEnd_toStartOf="@+id/btnGetContact"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnGetContact" />
+
+    <Button
+        android:id="@+id/btnGetContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:text="@string/get_contact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAddFavorite" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.text.Html" />
+
+        <variable
+            name="product"
+            type="com.example.antiquemall.data.model.Product" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_16sdp"
+        tools:context=".ui.home.productdetail.ProductInfoFragment">
+
+
+        <TextView
+            android:id="@+id/tvProductFeatures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/product_features"
+            android:textColor="@color/primary_blue_light"
+            android:textSize="@dimen/large_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+
+        <TextView
+            android:id="@+id/tvDimensions"
+            style="@style/product_detail_text_style"
+            android:text="@{Html.fromHtml(String.format(@string/dimensions, product.dimension))}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductFeatures"
+            tools:text="Dimensions : 12 X 12 x 12" />
+
+
+        <TextView
+            android:id="@+id/tvStatus"
+            style="@style/product_detail_text_style"
+            android:text="@{Html.fromHtml(String.format(@string/status, product.status))}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvDimensions"
+            tools:text="Status : Like New" />
+
+
+        <TextView
+            android:id="@+id/tvColor"
+            style="@style/product_detail_text_style"
+            android:text="@{Html.fromHtml(String.format(@string/color, product.color))}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+            tools:text="Color : Colorful" />
+
+
+        <TextView
+            android:id="@+id/tvMaterial"
+            style="@style/product_detail_text_style"
+            android:text="@{Html.fromHtml(String.format(@string/material, product.material))}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvColor"
+            tools:text="Material : Seramic" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            style="@style/product_detail_text_style"
+            android:text="@{Html.fromHtml(String.format(@string/price, product.price,@string/mark_dollar))}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvMaterial"
+            tools:text="Price : 234$" />
+
+        <TextView
+            android:id="@+id/tvSeller"
+            style="@style/product_detail_text_style"
+            android:text="@{Html.fromHtml(String.format(@string/seller, product.seller.name))}"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrice"
+            tools:text="Seller : Oguz Sahin" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/_16sdp" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_16sdp" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_16sdp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

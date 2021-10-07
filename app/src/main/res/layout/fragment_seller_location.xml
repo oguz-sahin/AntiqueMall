@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.hms.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    map:mapType="normal"
+    map:uiCompass="true"
+    map:uiRotateGestures="false"
+    map:uiScrollGestures="true"
+    map:uiTiltGestures="true"
+    map:uiZoomControls="true"
+    tools:context=".ui.home.productdetail.SellerLocationFragment" />

@@ -8,7 +8,7 @@
         android:id="@+id/splashFragment"
         android:name="com.example.antiquemall.ui.splash.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_signInFragment"
             app:destination="@id/signInFragment"
@@ -25,8 +25,8 @@
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.antiquemall.ui.signin.SignInFragment"
-        android:label="fragment_signin"
-        tools:layout="@layout/fragment_signin" >
+        android:label="Sign In"
+        tools:layout="@layout/fragment_signin">
         <action
             android:id="@+id/action_signInFragment_to_homeFragment"
             app:destination="@id/homeFragment"
@@ -36,17 +36,46 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.antiquemall.ui.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="Products"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment">
+            <argument
+                android:name="productId"
+                android:defaultValue="0" />
+        </action>
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.antiquemall.ui.profile.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_to_signInFragment"
             app:destination="@id/signInFragment"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_profileFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.antiquemall.ui.favorites.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.antiquemall.ui.home.productdetail.ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="productId"
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 </navigation>

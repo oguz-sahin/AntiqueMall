@@ -7,8 +7,9 @@ import androidx.activity.result.contract.ActivityResultContracts.StartActivityFo
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.viewModels
 import com.example.antiquemall.R
-import com.example.antiquemall.base.BaseFragment
+import com.example.antiquemall.base.BaseFragmentWithViewModel
 import com.example.antiquemall.databinding.FragmentSigninBinding
+import com.example.antiquemall.ui.signin.SignInFragmentDirections.actionSignInFragmentToHomeFragment
 import com.example.antiquemall.ui.vm.SignInViewModel
 import com.example.antiquemall.util.manager.AnalyticsManager.CONTINUE_WITHOUT_SIGN_IN
 import com.example.antiquemall.util.manager.AnalyticsManager.sendEvent
@@ -17,7 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class SignInFragment : BaseFragment<FragmentSigninBinding, SignInViewModel>(
+class SignInFragment : BaseFragmentWithViewModel<FragmentSigninBinding, SignInViewModel>(
     FragmentSigninBinding::inflate
 ) {
 
@@ -65,7 +66,7 @@ class SignInFragment : BaseFragment<FragmentSigninBinding, SignInViewModel>(
                 getString(R.string.yes)
             ) { _, _ ->
                 sendEvent(CONTINUE_WITHOUT_SIGN_IN)
-                navigateDirections(SignInFragmentDirections.actionSignInFragmentToHomeFragment())
+                navigateDirections(actionSignInFragmentToHomeFragment())
             }.setNegativeButton(getString(R.string.no)) { dialog, _ ->
                 dialog.cancel()
             }

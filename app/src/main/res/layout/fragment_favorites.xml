@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.antiquemall.ui.vm.FavoritesViewModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.favorites.FavoritesFragment">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFavoritesProducts"
+            isVisible="@{!viewModel.isFavoriteProductsEmpty()}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/item_product" />
+
+
+        <TextView
+            isVisible="@{viewModel.isFavoriteProductsEmpty()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_favorite_products"
+            android:textColor="@color/red_huawei"
+            android:textSize="@dimen/large_text_size"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</layout>

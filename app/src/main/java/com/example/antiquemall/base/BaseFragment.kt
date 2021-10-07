@@ -14,7 +14,6 @@ import com.example.antiquemall.R
 import com.example.antiquemall.base.BaseFragment.SnackBarType.ERROR
 import com.example.antiquemall.base.BaseFragment.SnackBarType.SUCCESS
 import com.example.antiquemall.util.manager.AnalyticsManager.sendEvent
-import com.example.antiquemall.util.observeEvent
 import com.google.android.material.snackbar.Snackbar
 
 /**
@@ -22,14 +21,13 @@ import com.google.android.material.snackbar.Snackbar
  */
 typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 
-abstract class BaseFragment<VB : ViewBinding, out VM : BaseViewModel>(
+abstract class BaseFragment<VB : ViewBinding>(
     private val inflate: Inflate<VB>
 ) : Fragment() {
 
     private var _binding: VB? = null
     val binding get() = _binding!!
 
-    abstract val viewModel: VM
 
     open fun initListener() {}
 
@@ -51,26 +49,10 @@ abstract class BaseFragment<VB : ViewBinding, out VM : BaseViewModel>(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        observeEvent(viewModel.baseEvent, ::onViewEvent)
         initObserver()
         initListener()
     }
 
-
-    private fun onViewEvent(event: BaseViewEvent) {
-        when (event) {
-            is BaseViewEvent.ShowSuccess -> showSuccess(event.message)
-
-            is BaseViewEvent.ShowError -> showError(event.message)
-
-            is BaseViewEvent.ShowConnectionError -> showError(getString(R.string.connection_error))
-
-            is BaseViewEvent.ShowGeneralError -> showError(getString(R.string.general_error))
-
-            is BaseViewEvent.NavigateTo -> navigateDirections(event.directions)
-
-        }
-    }
 
     fun showSuccess(@StringRes message: Int) = showMessage(SUCCESS, getString(message))
 

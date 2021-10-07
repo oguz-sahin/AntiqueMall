@@ -1,5 +1,6 @@
 package com.example.antiquemall.base
 
+import androidx.annotation.StringRes
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -40,6 +41,8 @@ abstract class BaseViewModel : ViewModel() {
     fun showError(message: String) = sendEvent(BaseViewEvent.ShowError(message))
 
     fun showSuccess(message: String) = sendEvent(BaseViewEvent.ShowSuccess(message))
+
+    fun showSuccess(@StringRes message: Int) = sendEvent(BaseViewEvent.ShowSuccessWithId(message))
 
     fun showGeneralError() = sendEvent(BaseViewEvent.ShowGeneralError)
 
